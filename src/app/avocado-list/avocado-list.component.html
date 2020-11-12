@@ -1,0 +1,27 @@
+<div class="card-group scroll-container">
+    <div class="row row-cols-2 col-11 mx-auto">
+        <div *ngFor="let avocado of avocados">
+            <div class="col-6 my-3 mx-auto">
+                <div class="card">
+                    <img [src]="avocado.image" class="img-fluid" [alt]="avocado.name">
+                    <div class="card-body">
+                        <h5 class="card-title">{{avocado.name}}</h5>
+                        <p class="card-text">{{avocado.price}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="input-group" *ngIf="avocado.stock>0">
+                            <div class="input-group-append" id="button-addon4">
+                                <button class="btn btn-outline-secondary" type="button" (click)="downQuantity(avocado)">-</button>
+                            </div>
+                            <input type="number" class="form-control text-center" [(ngModel)]="avocado.quantity" disabled>
+                            <div class="input-group-append" id="button-addon4">
+                                <button class="btn btn-outline-secondary" type="button" (click)="upQuantity(avocado)">+</button>
+                            </div>
+                            <button class="btn btn-success ml-2">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

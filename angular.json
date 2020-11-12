@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Avocado"
+    }
+  },
+  "defaultProject": "Avocado",
+  "cli": {
+    "analytics": "f0f1e690-be3c-4c25-87ed-78dbdbb20222"
+  }
 }
