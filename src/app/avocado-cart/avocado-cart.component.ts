@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Avocados } from '../Avocado';
+import { AvocadoCartService } from '../avocado-cart.service';
 
 @Component({
   selector: 'app-avocado-cart',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvocadoCartComponent implements OnInit {
 
-  constructor() { }
+  cartList: Avocados[];
+  total$: number;
+
+  constructor(private cart: AvocadoCartService, private total: AvocadoCartService) {
+  }
 
   ngOnInit(): void {
+    this.cart.cartList.subscribe(avos => {
+      this.cartList = avos;
+    });
+    this.total.total.subscribe(t => {
+      this.total$ = t;
+    });
   }
 
 }

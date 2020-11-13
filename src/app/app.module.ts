@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './about/about.component';
 import { AvocadoCartComponent } from './avocado-cart/avocado-cart.component';
 import { InputNumberComponent } from './input-number/input-number.component';
+import { SuggestionComponent } from './suggestion/suggestion.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { InputNumberComponent } from './input-number/input-number.component';
     AvocadoListComponent,
     AboutComponent,
     AvocadoCartComponent,
-    InputNumberComponent
+    InputNumberComponent,
+    SuggestionComponent
   ],
   imports: [
     BrowserModule,

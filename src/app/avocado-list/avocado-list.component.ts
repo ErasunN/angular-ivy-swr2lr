@@ -67,6 +67,8 @@ export class AvocadoListComponent implements OnInit {
 
   addToCart(avocado): void{
     this.cart.addToCart(avocado);
+    avocado.stock -= avocado.quantity;
+    avocado.quantity = 0;
   }
 
 }
