@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Avocados } from '../Avocado';
+import { AvocadoCartService } from '../avocado-cart.service';
 
 @Component({
   selector: 'app-avocado-list',
@@ -59,21 +60,13 @@ export class AvocadoListComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private cart: AvocadoCartService) {}
 
   ngOnInit(): void {
   }
 
-  downQuantity(avocado: Avocados): void{
-    if (avocado.quantity > 0){
-      avocado.quantity--;
-    }
-  }
-
-  upQuantity(avocado: Avocados): void{
-    if (avocado.quantity < avocado.stock){
-      avocado.quantity++;
-    }
+  addToCart(avocado): void{
+    this.cart.addToCart(avocado);
   }
 
 }

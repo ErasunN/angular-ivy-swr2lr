@@ -1,10 +1,10 @@
-<footer>
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item col-6 text-center border-0">
+<footer class="sticky-bottom">
+    <ul class="list-group list-group-horizontal d-flex justify-content-between">
+        <li class="list-group-item col-4 text-center border-0">
             <h5 class="text-center">Contacto:</h5>
-            <a href="/#" class="text-center">Conoce mas...</a>
+            <a [routerLink]="['/about']" class="text-center">Conoce mas...</a>
         </li>
-        <li class="list-group-item col-6 border-0">
+        <li class="list-group-item col-4 border-0">
             <h5 class="text-center">Hecho para:</h5>
             <div class="row text-center">
                 <span class="col-12">Seminario de Angular dictado por</span>
@@ -14,4 +14,8 @@
             </div>
         </li>
     </ul>
+    <div class="text-center">
+        <p class="font-weight-lighter text-muted m-0">Iconos obtenidos en <a href="https://www.flaticon.es/" class="text-center">www.flaticon.com</a></p>
+        <p class="font-weight-lighter text-muted m-0">Imagenes obtenidas de <a href="https://californiaavocado.com/" class="text-center">California Avocado</a></p>
+    </div>
 </footer>

@@ -1,0 +1,9 @@
+<div class="input-group">
+    <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-secondary" type="button" (click)="downQuantity()">-</button>
+    </div>
+    <input type="number" class="form-control text-center" [(ngModel)]="quantity" disabled>
+    <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-secondary" type="button" (click)="upQuantity()">+</button>
+    </div>
+</div>
